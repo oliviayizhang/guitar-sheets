@@ -116,7 +116,6 @@ header {
   display: inline-block;
   height:5.25em;
   width: 12.75em;
-  /*border: 1px solid red;*/
 }
 
 #demo .option:hover {
@@ -126,12 +125,6 @@ header {
 #demo img {
   width: 25.5em;
   height: 10.5em;
-}
-
-#message {
-  text-align: center;
-  font-size: 1.1em;
-  background-color: rgba(66, 244, 235, 0.3)
 }
 
 /*Styles for Invisi-Hover-Bubblons */
@@ -205,14 +198,15 @@ header {
   color: white;
 }
 
-.alert-message {
+.alert-message { /*Dec30*/
   padding: .3em;
   color: white;
   background-color: tomato;
-  margin-left: 23.7em;
+  position: absolute;
+  left: 34%;
   border-radius: 5px;
   text-align: center;
-  width: 50%;
+  width: 30%;
   display: none;
 }
 
@@ -309,9 +303,9 @@ header {
 
 	#rightPane {
     width: 30em!important;
-     margin: 1em auto;
-   }
-	}
+    margin: 1em auto;
+  }
+}
 
 /*** PRINT STYLES ***/
 @page {
@@ -333,7 +327,6 @@ header {
     width: 8.5in;
     height: 11in;
     background: white!important;
-
   }
 
   .parameter, #message, h1, h2, h3, h4, h5, p, i, button, #print, #clear, #demo i, .alert-box {
@@ -348,15 +341,12 @@ header {
     width: 100%;
   }
 
-  .all-options {
-    page-break-after: avoid;
-  }
-
   html, body, #demo, #mainFrame {
     width: 8.5in!important;
-    height: 11in!important;
     border:none!important;
     margin: 0!important;
+    page-break-after: void;/*Dec 30*/
+    height: 10.8in!important; /*This is a hack to avoid extra page*/ /*Dec 30*/
   }
 
   #demo img, #demo .all-options {
@@ -373,5 +363,4 @@ header {
     font-size: 1em;
     padding: 1em!important;
   }
-
 }
