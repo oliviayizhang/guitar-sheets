@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/javascript
+
+    steps:
+      - checkout
+      - run: npm start 
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
